@@ -1,0 +1,32 @@
+<p>user-list works!</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th>PhoneNumber</th>
+      <th>ProfileImage</th>
+      <th>Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phoneNumber}}</td>
+      <td>{{user.profileImage}}</td>
+      <td>
+        <span class="edit" [routerLink]="['/edit-user/', user._id]">
+          <button type="button">Edit</button>
+        </span>
+        <span class="delete" (click)="deleteUser(user, i)">
+          <button type="button">Delete</button>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

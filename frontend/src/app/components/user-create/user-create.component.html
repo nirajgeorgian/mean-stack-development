@@ -1,0 +1,10 @@
+<p>user-edit works!</p>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="firstName" placeholder="firstName"><br />
+  <input type="text" formControlName="lastName" placeholder="lastname"><br />
+  <input type="text" formControlName="email" placeholder="email"><br />
+  <input type="text" formControlName="phoneNumber" placeholder="phoneNumber"><br />
+
+  <button type="submit">Submit</button>
+</form>

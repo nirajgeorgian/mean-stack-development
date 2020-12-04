@@ -1,0 +1,11 @@
+<p>user-edit works!</p>
+
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="firstName" placeholder="firstName"><br />
+  <input type="text" formControlName="lastName" placeholder="lastname"><br />
+  <input type="text" formControlName="email" placeholder="email"><br />
+  <input type="text" formControlName="phoneNumber" placeholder="phoneNumber"><br />
+  <input type="file" (change)="onFileSelect($event)" #UploadFileInput><br />
+
+  <button type="submit">Submit</button>
+</form>
